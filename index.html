@@ -1,0 +1,146 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="file.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<title>task</title>
+
+<style>
+
+
+
+.icon-bar {
+position :fixed;
+top: 0;
+left: 0;
+ height:1000;
+  width: 100px; /* Set a specific width */
+  background-color: white; /* Dark-grey background */
+box-shadow: 10px 10px 8px grey;
+}
+
+.icon-bar a {
+  display: block ; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 30px; /* Add some padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: skyblue; /* White text color */
+  font-size: 15px; /* Increased font-size */
+  
+}
+.icon-bar a:focus{background-color:skyblue;
+color:black;}
+
+
+.active a{
+  background-color: skyblue; /* Add an active/current color */
+  
+}
+.aside{
+position:relative;
+
+top:150;
+left:100;
+height:1000;
+width:2000;
+ background-color: #F0F0F0;
+padding: 35px 70px 50px 100px;
+
+
+
+
+}
+.box{height:50;
+margin:50px 0px 0px 0px;
+}
+#box{border-radius: 5px;}
+lable{color:black;
+height:50px;}
+
+.top-left{
+position:absolute;
+color:skyblue;
+top:0;
+left:0;}
+
+
+
+input[type="file"]{
+display:none;}
+
+label{ height:100;
+width:100;
+background-color:white;
+position:absolute;
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:0;}
+body{
+
+</style>
+</head>
+<body>
+<div id="lesson plan" class="tabcontent">
+  
+ 
+
+<form class="aside">
+
+<a  href="#" class="top-left"><i class="fa fa-caret-left"> videos</i></a>
+
+<br>
+<br><br>
+
+ <input type="url" id="box" name="homepage" placeholder="insert URL here" size="100">
+<br><br><br>
+
+ <input type="file" id="file" accept="image/*" >&emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;   or
+ 
+ <label for= "file"> upload</label>     
+
+</form>
+</div>
+
+<div class="icon-bar">
+  <a  href="#"><i class="fa fa"> <img src="task image.jpg" ></i></a>
+  <a href="#" class="tablinks" onclick="opentab(event, 'students')" id="defaultOpen"><i class="fa fa ">&#xf2bd; <br>students</i></a>
+<a href="#"  class="tablinks" onclick="opentab(event, 'lesson plan')"  ><i class="fa fa-file-text-o"><br>lesson plan</i></a>
+  <a href="#"><i class="fa fa-gear"><br>settings</i></a>
+ 
+
+  
+</div>
+
+
+
+ <script>
+function myFunction() {
+  document.getElementById("demo").style.background = "skyblue";
+  document.getElementById("demo").style.color = "blue";
+}
+function opentab(evt, citytab) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(citytab).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
